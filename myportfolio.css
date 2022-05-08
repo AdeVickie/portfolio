@@ -1,0 +1,584 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+   
+   :root {
+
+    --bg-color:#000000;
+    --main-orange-color: #fed933;
+    --light-blue: #d8fffb;
+    --light-pink: #fdd8ff;
+    --light-yellow: #fffdc8;
+    --button-bg-color: linear-gradient(to right, #fb3030, #fc9613);
+    --img-bg-color: linear-gradient(
+     to right,
+     var(--light-blue),
+     var(--light-pink)
+    );
+    --box-shadow: #7b7d7d;
+   }
+   
+   body {
+    background: var(--bg-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   }
+   
+   /* header  */
+   @media only screen and (max-width: 600px) {
+       header {
+           margin-top: 40px;
+        }
+       }
+   header {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+    width: 100%;
+    height: 100vh;
+   }
+   .header__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    max-width: 50%;
+   }
+   .header__text {
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+    position: relative;
+   }
+   .header__text::before {
+    content: '';
+    width: 0.5rem;
+    height: 100%;
+    margin-right: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    border-radius: 1rem;
+    background: linear-gradient(#fb3030, #fc9613);
+   }
+   .header__text h1 {
+    font-size: 3.2rem;
+   }
+   .header__text span {
+    display: block;
+   }
+   .orange__text {
+    color: var(--main-orange-color);
+   }
+   div.header__left p:nth-child(2) {
+    color: #7b7d7d;
+   }
+   div.header__left p:nth-child(4) {
+    font-weight: bold;
+   }
+   .header__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 3rem;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    background: var(--button-bg-color);
+    color: #fff;
+    margin: 2rem 0 2rem 0;
+    border-radius: 0.7rem;
+    border: none;
+    transition: all 1s;
+    cursor: pointer;
+   }
+   .header__button:hover {
+    background: linear-gradient(to left, #fb3030, #fc9613);
+   }
+   .header__right {
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+   }
+   .circle__outside {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background: var(--img-bg-color);
+    
+   }
+   @media only screen and (max-width: 600px){
+       .circle__outside{
+           width: 10rem;
+           height: 10rem;
+       }
+       .circle__inside{
+           background-repeat: no-repeat;
+           width:40%;
+           height:40%;
+       }
+   }
+   .circle__inside {
+    width: 75%;
+    height: 75%;
+    background-image: url(./aiony-haust-3TLl_97HNJo-unsplash-removebg-preview.png);
+    background-size: 100%;
+   background-color: whitesmoke;
+    object-fit: cover;
+    border-radius: 50%;
+   }
+   span{
+      color:#fc9613;
+   }
+   @media only screen and (max-width: 600px){
+       h2{
+           margin-top: 60px;
+           font-size: 20px;
+       }
+      
+   }
+   h2{
+       text-align: center;
+       color:#fff;
+   }
+   
+   @media only screen and (max-width: 600px){
+       .card1, .card2, .card3 {
+           margin-left: 20px;
+           margin-bottom: 10px;
+       }
+       
+   }
+
+.card1{
+
+    height: 420px;
+    width: 320px;
+    background-color:#85b3d1ff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center!important;
+
+}
+
+.card1::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top:-50%;
+    background-color:#2460a7ff;
+    transform: skewY(345deg);
+    transition:2s ease-in-out;
+  
+}
+
+
+.card1:hover::before{
+    top:-70%;
+    transform: skewY(390deg);
+}
+
+.card1 .image{
+
+    position: absolute;
+    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card1 .image img{
+
+    max-width: 100%;
+    transition: 2s ease-in-out;
+}
+
+.card1:hover .image img{
+
+    width: 80%;
+}
+
+.text{
+
+    position: absolute;
+    color:black;
+    text-align: center;
+    font-size: 2px;
+    transition: 2s ease-in;
+    margin-top: 220px;
+}
+
+
+.card1:hover .text{
+
+   top: 50px !important;
+   transition: 2s ease-in;
+}
+
+.card2{
+
+    height: 420px;
+    width: 320px;
+    background-color:#85b3d1ff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center!important;
+
+}
+
+.card2::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top:-50%;
+    background-color:#2460a7ff;
+    transform: skewY(345deg);
+    transition:2s ease-in-out;
+  
+}
+
+
+.card2:hover::before{
+    top:-70%;
+    transform: skewY(390deg);
+}
+
+.card2 .image{
+
+    position: absolute;
+    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card2 .image img{
+
+    max-width: 100%;
+    transition: 2s ease-in-out;
+}
+
+.card2:hover .image img{
+
+    width: 80%;
+}
+
+.text{
+
+    position: absolute;
+    color:black;
+    text-align: center;
+    font-size: 2px;
+    transition: 2s ease-in;
+    margin-top: 220px;
+}
+
+
+.card2:hover .text{
+
+   top: 50px !important;
+   transition: 2s ease-in;
+}
+
+.card1{
+
+    height: 420px;
+    width: 320px;
+    background-color:#85b3d1ff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center!important;
+
+}
+
+.card1::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top:-50%;
+    background-color:#2460a7ff;
+    transform: skewY(345deg);
+    transition:2s ease-in-out;
+  
+}
+
+
+.card1:hover::before{
+    top:-70%;
+    transform:matrix(350deg);
+}
+
+.card1 .image{
+
+    position: absolute;
+    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card1 .image img{
+
+    max-width: 100%;
+    transition: 2s ease-in-out;
+}
+
+.card1:hover .image img{
+
+    width: 80%;
+}
+
+.text{
+
+    position: absolute;
+    color:black;
+    text-align: center;
+    font-size: 2px;
+    transition: 2s ease-in;
+    margin-top: 220px;
+}
+
+
+.card1:hover .text{
+
+   top: 50px !important;
+   transition: 2s ease-in;
+}
+
+.card2{
+
+    height: 420px;
+    width: 320px;
+    background-color:#ffbe7bff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center!important;
+
+}
+
+.card2::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top:-50%;
+    background-color:#e683a9ff;
+    transform: skewY(345deg);
+    transition:2s ease-in-out;
+  
+}
+
+
+.card2:hover::before{
+    top:-70%;
+    transform: skewY(390deg);
+}
+
+.card2 .image{
+
+    position: absolute;
+    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card2 .image img{
+
+    max-width: 100%;
+    transition: 2s ease-in-out;
+}
+
+.card2:hover .image img{
+
+    width: 80%;
+}
+
+.text{
+
+    position: absolute;
+    color:black;
+    text-align: center;
+    font-size: 2px;
+    transition: 2s ease-in;
+    margin-top: 220px;
+}
+
+
+.card2:hover .text{
+
+   top: 50px !important;
+   transition: 2s ease-in;
+}
+
+.card3{
+
+    height: 420px;
+    width: 320px;
+    background-color:#e090df;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center!important;
+
+}
+
+.card3::before{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    top:-50%;
+    background-color:#8800c7;
+    transform: skewY(345deg);
+    transition:2s ease-in-out;
+  
+}
+
+
+.card3:hover::before{
+    top:-70%;
+    transform: skewY(390deg);
+}
+
+.card3 .image{
+
+    position: absolute;
+    
+    width: 100%;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.card3 .image img{
+
+    max-width: 100%;
+    transition: 2s ease-in-out;
+}
+
+.card3:hover .image img{
+
+    width: 80%;
+}
+
+.text{
+
+    position: absolute;
+    color:black;
+    text-align: center;
+    font-size: 2px;
+    transition: 2s ease-in;
+    margin-top: 220px;
+}
+
+
+.card3:hover .text{
+
+   top: 50px !important;
+   transition: 2s ease-in;
+}
+
+ .text1 h1,p{
+     color:white;
+ }  
+   
+ @media only screen and (max-width: 600px) {
+    .text1{
+      margin-left: 20px;
+    }
+
+ }
+  
+  /* On mouse-over, add a deeper shadow */
+  .container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .card{
+    padding: 2px 16px;
+  }
+  .font{
+      color:#fc9613;
+      font-size: 100px;
+      margin-left: 80px;
+      
+  }
+  .text4 h4, p{
+      color:#000000;
+      text-align: center;
+      }
+    .card{
+        box-shadow: 2px 2px 0 white;
+    transition: 0.3s;
+    }
+    .button{
+        margin-left:80px;
+    }
+    @media only screen and (max-width: 600px) {
+        .card{
+            margin-bottom: 10px;
+             width:90%;
+        }
+    }
+    .flex-container {
+        display: flex;
+        flex-wrap: nowrap;
+        background-color: #0a070700;
+        justify-content: space-between;
+        border-bottom:0.5px solid white
+      }
+      
+      .flex-container > div {
+        width: 100px;
+        margin-top: 70px;
+        text-align: center;
+        line-height: 20px;
+        font-size: 10px;
+        font-weight:900;
+        color:white;
+        background-color: #0a070700;
+      }
+      @media only screen and (max-width: 600px){
+          h5{
+              font-size: 10px;
+          }
+      }
+.social{
+   margin-left: 50%;
+   margin-top: 50px;
+   word-spacing: 10px;
+}
+ h5{
+    text-align: center;
+    color:white;
+} 
+ h1, h2, h4{
+    color:white;
+}
